@@ -1,29 +1,23 @@
 <div id="above-posts">
   <div class="row">
     <div class="span7">
-      {{view Ember.TextArea id="post-text" placeholder="Say something..." rows="3" valueBinding="newPostTitle" disabledBinding="postBoxDisabled" class="span7"}}
+      {{view Ember.TextArea id="post-text" placeholder="say something..." rows="3" valueBinding="newPostTitle" disabledBinding="postBoxDisabled" class="span7"}}
     </div>
   </div>
   <div class="row">
     <div class="span2 offset5">
-      <button id="post-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewPost"}} class="btn btn-primary pull-right">
-        Post <i class="icon-share-alt icon-white"></i>
+      <button id="post-unencrypted-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewPost"}} class="btn btn-primary pull-right">
+        post unencrypted <i class="icon-share-alt icon-white"></i>
+      </button>
+      <p>
+
+    {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="3" valueBinding="encryptionPassword"  class="span2"}}        
+
+      <button id="post-encrypted-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewEncryptedPost"}} class="btn btn-primary pull-right">
+        post encrypted! <i class="icon-share-alt icon-white"></i>
       </button>
     </div>
   </div>
 </div>
 
 {{view "App.PostsView" controllerBinding="controllers.posts"}}
-
-enter something to be encrypted
-<input type = "text" id = "plaintext"><br>
-<p>
-enter a password
-<input type = "text" id = "encrypt_pass"><br>
-<p>
-<button type="button" id = "encrypt" onClick="encrypt_post()">encrypt</button>
-<p> <p>
-this is the encrypted text. 
-<textarea id = "ciphertext" rows="3" cols="20"></textarea><br>
-<p>
-decrypt this text with password? <input type = "text" id = "decrypt_pass"> <button type = "button" id = "decrypt" onClick="decrypt_post()">decrypt</button>

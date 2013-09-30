@@ -10,7 +10,8 @@ define([
   'plugins/text!app/templates/profile.hbs',
   'app/templates/helpers',
   'plugins/moment',
-  'plugins/resize'
+  'plugins/resize',
+  'sjcl'
 ],
 function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTemplate, profileTemplate) {
   Ember.TEMPLATES['application'] = Ember.Handlebars.compile(applicationTemplate);
@@ -102,10 +103,6 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       var self = this;
       var myUser = this.get('controllers.users.myUser.firstObject.user');
 
-      //encrypt the title here.
-      var tt = this.get('newPostTitle');
-      alert(sjcl.encrypt('text', tt));
-
       var newPost = App.Post.createRecord({
         user: myUser,
         title: this.get('newPostTitle')
@@ -114,7 +111,25 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
         self.set('newPostTitle', '');
       });
       newPost.get('transaction').commit();
+    },
+
+    createNewEncryptedPost: function() {
+      var self = this;
+      var myUser = this.get('controllers.users.myUser.firstObject.user');
+
+      //encrypt the title here.
+      tt = sjcl.encrypt(this.get('encryptionPassword'), this.get('newPostTitle')); 
+
+      var newPost = App.Post.createRecord({
+        user: myUser,
+        title: tt
+      });
+      newPost.on('didCreate', function() {
+        self.set('newPostTitle', '');
+      });
+      newPost.get('transaction').commit();
     }
+
   });
 
   App.ProfileController = Ember.Controller.extend({

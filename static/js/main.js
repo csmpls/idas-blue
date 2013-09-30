@@ -4,7 +4,7 @@ requirejs.config({
     'ember' : 'lib/ember/ember',
     'ember-data' : 'lib/ember/ember-data',
     'handlebars' : 'lib/handlebars',
-    'moment' : 'lib/moment'
+    'moment' : 'lib/moment',
     'sjcl' : 'lib/sjcl'
   },
   shim : {
