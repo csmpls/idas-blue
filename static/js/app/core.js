@@ -102,6 +102,10 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       var self = this;
       var myUser = this.get('controllers.users.myUser.firstObject.user');
 
+      //encrypt the title here.
+      var tt = this.get('newPostTitle');
+      alert(sjcl.encrypt('text', tt));
+
       var newPost = App.Post.createRecord({
         user: myUser,
         title: this.get('newPostTitle')

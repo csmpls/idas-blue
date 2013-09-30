@@ -14,3 +14,16 @@
 </div>
 
 {{view "App.PostsView" controllerBinding="controllers.posts"}}
+
+enter something to be encrypted
+<input type = "text" id = "plaintext"><br>
+<p>
+enter a password
+<input type = "text" id = "encrypt_pass"><br>
+<p>
+<button type="button" id = "encrypt" onClick="encrypt_post()">encrypt</button>
+<p> <p>
+this is the encrypted text. 
+<textarea id = "ciphertext" rows="3" cols="20"></textarea><br>
+<p>
+decrypt this text with password? <input type = "text" id = "decrypt_pass"> <button type = "button" id = "decrypt" onClick="decrypt_post()">decrypt</button>
