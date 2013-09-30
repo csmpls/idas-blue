@@ -1,33 +1,17 @@
-Vole
+idas blue
 ====
 
-Vole is a web application for sharing words, pictures and videos with others. Data is distributed peer-to-peer using Bittorrent Sync.
+Idas Blue is a web application for rapid, encrypted messaging with no third parties (servers etc).
 
+When the user hits "post," text is encrypted and stored locally as JSON. JSON files are synced direct-to-peers using BitTorrent sync, at which point it is encrypted again. Readers decrypt JSON files in the web browser, so, if you use your browser in "privacy mode," plaintext files are unlikely to be stored permanetly on the disk. 
 
-* A complete introduction is available on [vole.cc](http://vole.cc).
-* Please join the [mailing list](https://groups.google.com/forum/#!forum/vole-dev) for announcements and development discussion.
-* Follow us on Twitter [@volecc](https://twitter.com/volecc).
+* idas blue is a fork of [vole.cc](http://vole.cc).
+* Uses the [Stanford JS Crypto library](http://crypto.stanford.edu/sjcl/), which is awesome (but go bears). 
 
 Getting started
 ---------------
 
-Currently we are pre-release. The following steps are for interested developers.
-
-* [Download](https://github.com/vole/vole/releases) the latest version of Vole for Mac OSX, Windows or Linux.
-* Or, you can compile it yourself. See [CONTRIBUTING](https://github.com/vole/vole/blob/master/CONTRIBUTING.md).
-* Run the Vole application from the command line. First, `cd` into the directory that you placed Vole. Then, on Mac/Linux type `./vole`, and on Windows type `vole.exe`.
-* Open a web browser and go to [http://localhost:6789](http://localhost:6789).
-* Click 'My Profile'
-* Enter your name. Enter your Gravatar email (optional).
-* Click 'Home'
-* Post something. Vole supports [Github flavored markdown](https://help.github.com/articles/github-flavored-markdown), and will also auto-embed any image links you put in the text.
-
-Sharing and following
----------------------
-
-Start by installing [Bittorrent Sync](http://labs.bittorrent.com/experiments/sync.html).
-
-Following and sharing currently involves manually setting up folders, however we'd like to automate it as soon as Bittorrent Sync releases a build that supports control via an API.
+Read "contrib.md." For now you need to install [Bittorrent Sync](http://labs.bittorrent.com/experiments/sync.html) separately.
 
 Following others
 ----------------
@@ -68,14 +52,16 @@ Please see the [CHANGELOG](https://github.com/vole/vole/blob/master/CHANGELOG.md
 Technology
 ----------
 
+* [SJCL](http://crypto.stanford.edu/sjcl/)
 * [Bittorrent Sync](http://labs.bittorrent.com/experiments/sync.html)
+* [Vole](http://vole.cc)
 * [Go](http://golang.org/)
 * [Ember.js](http://emberjs.com/)
 
 License
 -------
 
-Copyright (C) 2013 Vole development team
+all Vole code copyright (C) 2013 Vole development team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
