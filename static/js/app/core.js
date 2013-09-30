@@ -99,6 +99,10 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       return !(!this.get('postBoxDisabled') && this.get('newPostTitle.length') > 0);
     }.property('postBoxDisabled', 'newPostTitle'),
 
+    encryptPostButtonDisabled: function() {
+      return !(!this.get('postButtonDisabled') && this.get('newEncryptionPassword.length') > 0);
+    }.property('postButtonDisabled', 'newEncryptionPassword'),
+
     createNewPost: function() {
       var self = this;
       var myUser = this.get('controllers.users.myUser.firstObject.user');
@@ -118,7 +122,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       var myUser = this.get('controllers.users.myUser.firstObject.user');
 
       //encrypt the title here.
-      tt = sjcl.encrypt(this.get('encryptionPassword'), this.get('newPostTitle')); 
+      tt = sjcl.encrypt(this.get('newEncryptionPassword'), this.get('newPostTitle')); 
 
       var newPost = App.Post.createRecord({
         user: myUser,

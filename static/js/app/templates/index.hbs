@@ -11,9 +11,9 @@
       </button>
       <p>
 
-    {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="3" valueBinding="encryptionPassword"  class="span2"}}        
+    {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="3" valueBinding="newEncryptionPassword"  class="span2"}}        
 
-      <button id="post-encrypted-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewEncryptedPost"}} class="btn btn-primary pull-right">
+      <button id="post-encrypted-button" {{bindAttr disabled="encryptPostButtonDisabled"}} {{action "createNewEncryptedPost"}} class="btn btn-primary pull-right">
         post encrypted! <i class="icon-share-alt icon-white"></i>
       </button>
     </div>
