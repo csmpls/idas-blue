@@ -1,4 +1,9 @@
 <div id="posts-list">
+
+<div id = "decrypt-feed">
+  {{view Ember.TextArea id="decrypt-password" placeholder="pick a password..." rows="1" valueBinding="newDecryptionPassword"  class="decrypt"}}    <button id="decrypt-button" {{bindAttr disabled="decryptButtonDisabled"}} {{action "decryptFeed"}} class="btn btn-primary pull-right"> decrypt feed with password</button>
+</div>
+
   {{#if length}}
     {{#if filteredPosts}}
       <div id="posts-loaded">
@@ -24,11 +29,13 @@
                 </small>
               </div>
               <div class="row">
-                <div class="span6">
+                
+                <div class="span6" id="titlespan">
                   <span>
                     {{unbound markdown title}}
                   </span>
                 </div>
+
               </div>
             </div>
           </div>

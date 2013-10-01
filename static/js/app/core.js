@@ -46,6 +46,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
   App.Post = DS.Model.extend({
     title: DS.attr('string'),
     created: DS.attr('number'),
+    is_encrypted: DS.attr('boolean'),
     userId: DS.attr('string'),
     userName: DS.attr('string'),
     userAvatar: DS.attr('string'),
@@ -109,7 +110,8 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
 
       var newPost = App.Post.createRecord({
         user: myUser,
-        title: this.get('newPostTitle')
+        title: this.get('newPostTitle'),
+        is_encrypted: false
       });
       newPost.on('didCreate', function() {
         self.set('newPostTitle', '');
@@ -126,7 +128,8 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
 
       var newPost = App.Post.createRecord({
         user: myUser,
-        title: tt
+        title: tt,
+        is_encrypted: true 
       });
       newPost.on('didCreate', function() {
         self.set('newPostTitle', '');
@@ -196,6 +199,11 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
         post.get('transaction').commit();
       }
     },
+
+    decryptButtonDisabled: function() {
+      return !(this.get('newDecryptionPassword.length') > 0);
+    }.property('newDecryptionPassword'),
+
 
     loadMore: function() {
       var filter = {

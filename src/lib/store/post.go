@@ -13,9 +13,10 @@ import (
  */
 type Post struct {
   // Properties that should be saved to disk.
-  Id      string `json:"id"`
-  Title   string `json:"title"`
-  Created int64  `json:"created"`
+  Id          string `json:"id"`
+  Title       string `json:"title"`
+  Created     int64  `json:"created"`
+  IsEncrypted bool   `json:"is_encrypted"`
 
   // Properties that are used by Vole backend and frontend, but not saved to disk
   // when the post is marshaled.
@@ -34,7 +35,7 @@ type Post struct {
  *
  * Initialize a new post creating the id and other fields.
  */
-func (post *Post) InitNew(title, userPath, userId, userName, userAvatar string, isMyUser bool) {
+func (post *Post) InitNew(title, userPath, userId, userName, userAvatar string, encrypted, isMyUser bool) {
   // Create a new UUID
   uuidBytes, _ := uuid.NewV4()
   uuid := fmt.Sprintf("%s", uuidBytes)
@@ -48,6 +49,7 @@ func (post *Post) InitNew(title, userPath, userId, userName, userAvatar string, 
   post.Id = uuid
   post.Title = title
   post.Created = created
+  post.IsEncrypted = encrypted
   post.UserId = userId
   post.UserName = userName
   post.UserAvatar = userAvatar
