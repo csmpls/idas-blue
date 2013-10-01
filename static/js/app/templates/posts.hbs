@@ -8,7 +8,12 @@
     {{#if filteredPosts}}
       <div id="posts-loaded">
         {{#each filteredPosts}}
+        
+          {{#if is_encrypted}}
+          <div class="post row crypted">
+          {{else}}
           <div class="post row">
+          {{/if}}
             <div class="span1">
               <img class="avatar-img img-rounded" src="{{unbound userAvatar}}" />
               <ul class="post-actions">
@@ -32,7 +37,11 @@
                 
                 <div class="span6" id="titlespan">
                   <span>
+                    {{#if is_encrypted}}
+                    <i>encrypted.</i>
+                    {{else}}
                     {{unbound markdown title}}
+                    {{/if}}
                   </span>
                 </div>
 
