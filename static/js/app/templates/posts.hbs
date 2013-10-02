@@ -38,9 +38,9 @@
                 <div class="span6" id="titlespan">
                   <span>
                     {{#if is_encrypted}}
-                    <i>encrypted.</i>
+                      {{unbound markdown decryptTitle}}  
                     {{else}}
-                    {{unbound markdown title}}
+                      {{unbound markdown title}}
                     {{/if}}
                   </span>
                 </div>

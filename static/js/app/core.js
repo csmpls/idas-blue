@@ -50,7 +50,16 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
     userId: DS.attr('string'),
     userName: DS.attr('string'),
     userAvatar: DS.attr('string'),
-    isMyPost: DS.attr('boolean')
+    isMyPost: DS.attr('boolean'),
+
+    decryptTitle: function() {
+      var ciphertext = this.get('title');
+      try {
+        return sjcl.decrypt("hash", ciphertext);
+      } catch (e) {      
+        return "*encrypted.*"
+      }
+    }.property('title')
   });
 
   App.User = DS.Model.extend({
