@@ -6,11 +6,11 @@
     <div class="span7">
       {{#if controllers.users.myUser.firstObject.name}}
         <div class="text-right">
-          <h3 id="my-username-title">{{#linkTo "profile"}}<a href="#">{{controllers.users.myUser.firstObject.name}}</a>{{/linkTo}}</h3>
+          <h3 id="my-username-title">{{#linkTo "profile" tagName="li"}}<a href="#">{{controllers.users.myUser.firstObject.name}}</a>{{/linkTo}}</h3>
         </div>
       {{else}}
       <div class="text-right">
-          <h3 id="my-username-title">{{#linkTo "profile"}}<a href="#">authenticate yourself</a>{{/linkTo}}</h3>
+          <h3 id="my-username-title">{{#linkTo "profile" tagName="li"}}<a href="#">authenticate yourself</a>{{/linkTo}}</h3>
         </div>
       {{/if}}
 
