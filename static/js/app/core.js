@@ -50,16 +50,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
     userId: DS.attr('string'),
     userName: DS.attr('string'),
     userAvatar: DS.attr('string'),
-    isMyPost: DS.attr('boolean'),
-
-    decryptTitle: function() {
-      var ciphertext = this.get('title');
-      try {
-        return sjcl.decrypt("hash", ciphertext);
-      } catch (e) {      
-        return "*encrypted.*"
-      }
-    }.property('title')
+    isMyPost: DS.attr('boolean')
   });
 
   App.User = DS.Model.extend({
@@ -112,6 +103,39 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
     encryptPostButtonDisabled: function() {
       return !(!this.get('postButtonDisabled') && this.get('newEncryptionPassword.length') > 0);
     }.property('postButtonDisabled', 'newEncryptionPassword'),
+
+
+    decryptButtonDisabled: function() {
+      return !(this.get('newDecryptionPassword.length') > 0);
+    }.property('newDecryptionPassword'),
+
+    decryptFeed: function() {
+      var decpass = this.get('newDecryptionPassword');
+
+      $( ".post" ).each(function( index ) {
+          var ciphertext = $(this).find(".hiddenspan").text().trim();
+
+
+          // if we found a ciphertext span, try to decrypt it
+          if (ciphertext.length > 0) {
+            try {
+              var plaintext = sjcl.decrypt(decpass, ciphertext);
+              console.log(plaintext);
+
+              //if we've gotten this far, add the plaintext back into the post
+              //and add that post to our array
+              $test =  $(this).find('.span6').find('.span6').find('span').replaceWith(marked(plaintext));
+            } 
+            catch (e) { 
+              //this password wasn't correct
+            }
+          } 
+      });
+
+      decpass = '';
+
+
+    },
 
     createNewPost: function() {
       var self = this;
@@ -208,11 +232,6 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
         post.get('transaction').commit();
       }
     },
-
-    decryptButtonDisabled: function() {
-      return !(this.get('newDecryptionPassword.length') > 0);
-    }.property('newDecryptionPassword'),
-
 
     loadMore: function() {
       var filter = {
