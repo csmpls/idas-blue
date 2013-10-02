@@ -8,8 +8,12 @@
   margin: 0 0 15px 0;
 }
 
+.mainbody {
+  padding-left:10%;
+}
+
 #logo {
-  color: #888888;
+  color: #fff;
 }
 
 #post-unencrypted-button {
@@ -47,8 +51,8 @@
   font-size: 14px;
 }
 
-#my-username-title {
-  color: #888888;
+#my-username-title a {
+  color: #fff;
 }
 
 .post {

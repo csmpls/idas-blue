@@ -1,31 +1,26 @@
 <header id="main-nav">
   <div class="row">
     <div class="span2 offset1">
-      <h2 id="logo">Vole</h2>
+      <h2 id="logo">{{#linkTo "index"}}<a href="#">idas blue</a>{{/linkTo}}</h2>
     </div>
     <div class="span7">
       {{#if controllers.users.myUser.firstObject.name}}
         <div class="text-right">
-          <h3 id="my-username-title">{{controllers.users.myUser.firstObject.name}}</h3>
+          <h3 id="my-username-title">{{#linkTo "profile"}}<a href="#">{{controllers.users.myUser.firstObject.name}}</a>{{/linkTo}}</h3>
+        </div>
+      {{else}}
+      <div class="text-right">
+          <h3 id="my-username-title">{{#linkTo "profile"}}<a href="#">authenticate yourself</a>{{/linkTo}}</h3>
         </div>
       {{/if}}
+
     </div>
   </div>
 </header>
 
 <main>
   <div class="row">
-    <div class="span2 offset1">
-      <ul class="nav nav-pills nav-stacked well">
-        {{#linkTo "index" tagName="li"}}
-          <a href="#">Home</a>
-        {{/linkTo}}
-        {{#linkTo "profile" tagName="li"}}
-          <a href="#">My profile</a>
-        {{/linkTo}}
-      </ul>
-    </div>
-    <div class="span7">
+    <div class="span7 mainbody">
       {{outlet}}
     </div>
   </div>
