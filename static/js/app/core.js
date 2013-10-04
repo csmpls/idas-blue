@@ -120,11 +120,10 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
           if (ciphertext.length > 0) {
             try {
               var plaintext = sjcl.decrypt(decpass, ciphertext);
-              console.log(plaintext);
+              //add the plaintext back into the post
+              $(this).find('.span6').find('.span6').find('span').replaceWith(marked(plaintext));
+              $(this).toggleClass('crypted');
 
-              //if we've gotten this far, add the plaintext back into the post
-              //and add that post to our array
-              $test =  $(this).find('.span6').find('.span6').find('span').replaceWith(marked(plaintext));
             } 
             catch (e) { 
               //this password wasn't correct
