@@ -1,28 +1,25 @@
 <div id="above-posts">
   <div class="row">
     <div class="span7">
-      {{view Ember.TextArea id="post-text" placeholder="say something..." rows="3" valueBinding="newPostTitle" disabledBinding="postBoxDisabled" class="span7"}}
+      {{view Ember.TextArea id="post-text" placeholder="say something..." rows="5" valueBinding="newPostTitle" disabledBinding="postBoxDisabled" class="saysomething"}}
     </div>
   </div>
   <div class="row">
-    <div class="span2 offset5">
-      <button id="post-unencrypted-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewPost"}} class="btn btn-primary pull-right">
-        post unencrypted <i class="icon-share-alt icon-white"></i>
+      <button id="post-unencrypted-button" {{bindAttr disabled="postButtonDisabled"}} {{action "createNewPost"}}>
+        post unencrypted <i class="icon-share-alt"></i>
       </button>
       <p>
     </div>
 
-    <div class="span2 offset5">
-      {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="3" valueBinding="newEncryptionPassword"  class="span2"}}        
-      <button id="post-encrypted-button" {{bindAttr disabled="encryptPostButtonDisabled"}} {{action "createNewEncryptedPost"}} class="btn btn-primary pull-right">
-        post encrypted! <i class="icon-share-alt icon-white"></i>
+      {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="1" valueBinding="newEncryptionPassword" class="encryptionpass"}}        
+
+      <button id="post-encrypted-button" {{bindAttr disabled="encryptPostButtonDisabled"}} {{action "createNewEncryptedPost"}} >post encrypted! <i class="icon-share-alt"></i>
       </button>
-    </div>
   
   
 
       <div id = "decrypt-feed">
-        {{view Ember.TextArea id="decrypt-password" placeholder="pick a password..." rows="1" valueBinding="newDecryptionPassword"  class="decrypt"}}    <button id="decrypt-button" {{bindAttr disabled="decryptButtonDisabled"}} {{action "decryptFeed"}} class="btn btn-primary pull-right"> decrypt feed with password</button>
+        {{view Ember.TextArea id="decrypt-password" placeholder="pick a password..." rows="1" valueBinding="newDecryptionPassword"  class="decrypt"}}    <button id="decrypt-button" {{bindAttr disabled="decryptButtonDisabled"}} {{action "decryptFeed"}} > decrypt feed with password</button>
     </div>
 
   </div>

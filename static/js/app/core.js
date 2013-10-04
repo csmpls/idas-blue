@@ -122,7 +122,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
               var plaintext = sjcl.decrypt(decpass, ciphertext);
               //add the plaintext back into the post
               $(this).find('.span6').find('.span6').find('span').replaceWith(marked(plaintext));
-              $(this).toggleClass('crypted');
+              $(this).toggleClass('decrypted');
 
             } 
             catch (e) { 

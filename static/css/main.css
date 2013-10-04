@@ -21,16 +21,26 @@ body {
   color: #fff;
 }
 
+.saysomething {
+  width:100%;
+}
+
 #post-unencrypted-button {
+  float:right;
   margin: 0 0 10px 5px;
   vertical-align: bottom;
 }
 
+.encryptionpass {
+
+}
 #post-encrypted-button {
+  position:relative;
+  float: right;
   margin: 0 0 10px 5px;
   vertical-align: bottom;
-  background-color:#ff0000;
-}
+} 
+
 
 #above-posts {
   min-height: 90px;
@@ -71,7 +81,11 @@ body {
 }
 
 .crypted {
-  background-color:#333;
+  background-color:#444;
+}
+
+.decrypted {
+  background-color:#CCB1B3;
 }
 
 .avatar-img {
@@ -88,10 +102,21 @@ body {
   font-weight:bold;
 }
 
+.crypted .user-name {
+  font-style: italic;
+  font-weight:bold;
+  color:#444;
+}
+
 .time {
-  color: #555;
-  margin-left:5px;
+  color: #777;
+  position:relative;
+  float:right;
   font-size: 75%;
+}
+
+.crypted .time {
+  visibility: hidden;
 }
 
 .post-actions {
@@ -111,6 +136,7 @@ body {
 }
 
 .load-more {
+  margin-top:45px;
   width: 100%;
 }
 
