@@ -132,6 +132,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       });
 
       decpass = '';
+      this.set('newDecryptionPassword', '');
 
 
     },
