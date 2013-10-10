@@ -27,17 +27,19 @@ body {
 
 #post-unencrypted-button {
   float:right;
-  margin: 0 0 10px 5px;
+  margin: 0 0 10px 0;
   vertical-align: bottom;
 }
 
 .encryptionpass {
-
+  float:right;
+  margin: 0 0 10px 0;
+  vertical-align: bottom;
 }
 #post-encrypted-button {
   position:relative;
   float: right;
-  margin: 0 0 10px 5px;
+  margin: 0 0 10px 0;
   vertical-align: bottom;
 } 
 
