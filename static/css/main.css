@@ -97,6 +97,10 @@ body {
   visibility:hidden;
 }
 
+.hidden {
+  visibility:hidden;
+}
+
 .user-name {
   font-style: italic;
   font-weight:bold;

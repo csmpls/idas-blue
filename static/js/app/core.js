@@ -100,8 +100,13 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       return !(!this.get('postBoxDisabled') && this.get('newPostTitle.length') > 0);
     }.property('postBoxDisabled', 'newPostTitle'),
 
+    //deprecating....
     encryptPostButtonDisabled: function() {
       return !(!this.get('postButtonDisabled') && this.get('newEncryptionPassword.length') > 0);
+    }.property('postButtonDisabled', 'newEncryptionPassword'),
+
+    encryptButtonShown: function() {
+      return (this.get('newEncryptionPassword.length') > 0);
     }.property('postButtonDisabled', 'newEncryptionPassword'),
 
 
