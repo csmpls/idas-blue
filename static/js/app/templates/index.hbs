@@ -1,12 +1,13 @@
 <div id="above-posts">
+  
   <div class="row">
     <div class="span7">
       {{view Ember.TextArea id="post-text" placeholder="say something..." rows="5" valueBinding="newPostTitle" disabledBinding="postBoxDisabled" class="saysomething"}}
     </div>
   </div>
-  <div class="row">
+  
 
-        
+  <div class="row">
 
       <button id="post-unencrypted-button" {{bindAttr disabled = "postButtonDisabled"}} {{bindAttr class = "encryptButtonShown:hidden"}}{{action "createNewPost"}}>
         post unencrypted <i class="icon-share-alt"></i>
@@ -15,18 +16,15 @@
       <button id="post-encrypted-button"  {{bindAttr disabled = "postButtonDisabled"}} {{bindAttr class = "encryptButtonShown::hidden"}} {{action "createNewEncryptedPost"}} >post encrypted! <i class="icon-share-alt"></i>
       </button>
 
-           {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="1" valueBinding="newEncryptionPassword" class="encryptionpass"}}  
-
-  </div>  
-
-      <div id = "decrypt-feed">
-        {{view Ember.TextArea id="decrypt-password" placeholder="pick a password..." rows="1" valueBinding="newDecryptionPassword"  class="decrypt"}}    <button id="decrypt-button" {{bindAttr disabled="decryptButtonDisabled"}} {{action "decryptFeed"}} > decrypt feed with password</button>
-    </div>
-
+           {{view Ember.TextArea id="encrypt-password" placeholder="pick a password..." rows="1" valueBinding="newEncryptionPassword" id="encryptionpass"}}  
   </div>
-
 </div>
 
+
+  <div id ="poststitle"> posts </div>
+  <div id = "decrypt-feed">
+        {{view Ember.TextArea id="decrypt-password" placeholder="decrypt feed with password.." rows="1" valueBinding="newDecryptionPassword"  class="decrypt"}}    <button id="decrypt-button" {{bindAttr disabled="decryptButtonDisabled"}} {{action "decryptFeed"}} > decrypt</button>
+    </div>
 
 
 {{view "App.PostsView" controllerBinding="controllers.posts"}}
