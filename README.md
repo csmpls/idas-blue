@@ -17,8 +17,8 @@ Following others
 ----------------
 
 * Grab the **read-only** ID of the person you want to follow. A directory is in progress at [vole.cc](http://vole.cc). Why not start with Vole Team updates? Our key is RA32XLBBHXMWMECGJAJSJMMPQ3Z2ZGR7K.
-* Find the Vole `users` folder. Unless you changed the defaults, it will be in a directory called `Vole/users` in your home folder.
-* Create a new folder in `Vole/users`, you should name it after the user that you're about to follow. For example, `Vole/users/voleteam`.
+* Find the Idas Blue `users` folder. Unless you changed the defaults, it will be in a directory called `idas-blue/users` in your home folder.
+* Create a new folder in `idas-blue/users`, you should name it after the user that you're about to follow. For example, `idas-blue/users/voleteam`.
 * In BitTorrent Sync, add this new folder as a shared folder, using the read-only key you grabbed in step 1. [Instructions](http://labs.bittorrent.com/experiments/sync/get-started.html) are available on their site and vary a little by operating system.
 ![OSX Screenshot](https://f.cloud.github.com/assets/453297/692312/c113737a-dc18-11e2-84e4-dee7e0507c08.png)
 * You should receive notification that the folder has sync'd.
@@ -42,12 +42,6 @@ To override the default configuration options, make a copy of `config.sample.jso
 
 Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from any network device, instead of just the local machine.
 
-Versions
---------
-
-Vole uses [semantic versioning](http://semver.org).
-
-Please see the [CHANGELOG](https://github.com/vole/vole/blob/master/CHANGELOG.md) for version history.
 
 Technology
 ----------
