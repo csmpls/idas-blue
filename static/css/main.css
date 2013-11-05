@@ -10,9 +10,10 @@ body {
  padding-left:25px;
 }
 
-#main-nav {
-  background: black;
-  margin: 0 0 15px 0;
+.my-username-titlea {
+  color:black;
+  margin: 0;
+  width:100%;
 }
 
 .mainbody {
@@ -20,9 +21,6 @@ body {
   width:100%;
 }
 
-#logo {
-  color: #fff;
-}
 
 .saysomething {
   width:100%;
@@ -85,7 +83,13 @@ body {
 }
 
 #my-username-title a {
-  color: #fff;
+  color: #343;
+}
+
+#logo {
+  padding-left:25px;
+} #logo a {
+  color:#333;
 }
 
 .post {

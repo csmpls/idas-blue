@@ -171,6 +171,7 @@ function (Config, Ember, DS, marked, applicationTemplate, indexTemplate, postsTe
       });
       newPost.on('didCreate', function() {
         self.set('newPostTitle', '');
+        self.set('newEncryptionPassword', '');
       });
       newPost.get('transaction').commit();
     }
