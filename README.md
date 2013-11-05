@@ -29,7 +29,7 @@ Sharing your posts
 
 Find your own user folder, for example, if you created a profile named 'Chuck':
 
-    /home/chuck/Vole/users/Chuck_9674e8e8-7c7a-41e6-52ed-51a3f7969812
+    /home/chuck/idas-blue/users/Chuck_9674e8e8-7c7a-41e6-52ed-51a3f7969812
 
 * In Bittorrent Sync, add this folder as a shared folder.
 * In the folder options, grab the **read-only key**. Make sure the key starts with the letter 'B' that signifies it's the read-only one. You can find it by going to the advanced folder preferences. This is the key that you can share with others so they can follow your posts.
@@ -46,8 +46,8 @@ Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from a
 Technology
 ----------
 
-* [SJCL](http://crypto.stanford.edu/sjcl/)
-* [Bittorrent Sync](http://labs.bittorrent.com/experiments/sync.html)
+* [stanford javascript crypto library](http://crypto.stanford.edu/sjcl/)
+* [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html)
 * [Vole](http://vole.cc)
 * [Go](http://golang.org/)
 * [Ember.js](http://emberjs.com/)
