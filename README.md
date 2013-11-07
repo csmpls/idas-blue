@@ -8,6 +8,8 @@ When the user hits "post," text is encrypted and stored locally as JSON. JSON fi
 * idas blue is a fork of [vole.cc](http://vole.cc).
 * Uses the [Stanford JS Crypto library](http://crypto.stanford.edu/sjcl/), which is awesome (but go bears). 
 
+![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
+
 Getting started
 ---------------
 
@@ -43,7 +45,6 @@ To override the default configuration options, make a copy of `config.sample.jso
 Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from any network device, instead of just the local machine.
 
 
-![http://www.youtube.com/watch?v=riifOyp4V6Y]
 
 Technology
 ----------
