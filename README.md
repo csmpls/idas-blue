@@ -43,7 +43,7 @@ To override the default configuration options, make a copy of `config.sample.jso
 Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from any network device, instead of just the local machine.
 
 
-[http://www.youtube.com/watch?v=riifOyp4V6Y]
+![http://www.youtube.com/watch?v=riifOyp4V6Y]
 
 Technology
 ----------
