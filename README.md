@@ -5,12 +5,12 @@ idas blue is a peer-to-peer messaging system with end-to-end encryption.
 posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. some open-source thing, mesh network, whatever.
 
 ## end-to-end encryption
-posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. posts are decrypted in the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
+posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
 ## trust in a trustless network
-idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. so, if you only want three people reading your communications, you're going to have a tiny network with not a lot of resiliance.
+idas-blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (bittorrent gets around the great firewall). however, vole stores posts as plaintext - anyone with a user's address can read all of their posts. so, if you only want three people reading your communications, you're going to have a tiny network with not a lot of resiliance.
 
-with idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your posts.
+with idas-blue, **you can disseminate your posts in an untrustable network**, letting untrusted peers propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your shit.
 
 ## researchily  
 this project aims to implement "permissions" in a largely-distributed public-key cryptosystem.
