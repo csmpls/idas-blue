@@ -8,7 +8,7 @@ posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experim
 posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. posts are decrypted in the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
 ## trust in a trustless network
-With idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. [Only peers with the right password will be able to read your posts](http://en.wikipedia.org/wiki/RSA_(algorithm)).
+With idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. Only peers with the right password will be able to read your posts.
 
 idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. 
 
