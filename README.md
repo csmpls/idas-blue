@@ -19,7 +19,7 @@ this project is primarily concerned with implementing "permissions" in a largely
 
 ## big problems right now
 - bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. **(fixibility: spicy)**
-- you can't include files very easily. BitTorrent sync doesn't mind files, but idas doesn't display or link to those files in the browser. we want this to be like a tumblr of bittorrented content. **(fixibility: mild)**
+- idas doesn't handle non-text very well. BT will sync whatever files, but right now idas doesn't display or link to those files in the browser. we want this to be like a tumblr of bittorrented content. **(fixibility: mild)**
 - it look like shit **(fixibility: spicy (for me))**
 
 Getting started
