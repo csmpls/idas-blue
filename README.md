@@ -2,7 +2,7 @@ idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
 ## peer-to-peer messaging
-posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. alternative p2p, mesh network, bring it on.
+posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. some open-source thing, mesh network, whatever.
 
 ## end-to-end encryption
 posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. posts are decrypted in the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
@@ -10,7 +10,7 @@ posts are encrypted from the moment the sender hits the "send" button to the mom
 ## trust in a trustless network
 With idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. Only peers with the right password will be able to read your posts.
 
-idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. 
+idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, if you only need to communicate with three people, you're going to have a tiny network with not a lot of resiliance. also, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. 
 
 ## researchily  
 this project is primarily concerned with implementing "permissions" in a largely-distributed public-key cryptosystem.
