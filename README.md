@@ -18,9 +18,9 @@ this project is primarily concerned with implementing "permissions" in a largely
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
 
 ## big problems right now
-- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. **(fixibility: hard)**
-- you can't include files very easily. BitTorrent sync doesn't mind files, but idas doesn't display or link to those files in the screen. we want this to be like a tumblr of bittorrented content. **(fixibility: doable)**
-- it look like shit **(fixibility: hard (for me))**
+- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. **(fixibility: spicy)**
+- you can't include files very easily. BitTorrent sync doesn't mind files, but idas doesn't display or link to those files in the browser. we want this to be like a tumblr of bittorrented content. **(fixibility: mild)**
+- it look like shit **(fixibility: spicy (for me))**
 
 Getting started
 ---------------
