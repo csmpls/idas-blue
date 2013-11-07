@@ -15,16 +15,12 @@ with idas-blue, you can disseminate your posts to a public network, letting untr
 ## researchily  
 this project is primarily concerned with implementing "permissions" in a largely-distributed public-key cryptosystem.
 
-# how it works
-You follow people at "addresses." So it's kind of like twitter. But there are no length limits.
-
-Posts are written in Markdown.
-
-When you follow someone, you may get posts that are unencrypted, but you will probably get posts that appear blacked out. These posts are encrypted. You can enter a password at the top of your feed to decrypt them. 
-
-Note that each post can have its own password - if you can decrypt *some* of your friend's posts but not *all* of them, he is probably giving different passwords to different people. 
-
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
+
+## big problems right now
+- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. **(fixibility: hard)**
+- you can't include files very easily. BitTorrent sync doesnt' mind, but we can't display or link to those files in the screen. we want this to be like a tumblr of bittorrented content. **(fixibility: doable)**
+- it look like shit **(fixibility: hard (for me))**
 
 Getting started
 ---------------
@@ -51,6 +47,7 @@ Find your own user folder, for example, if you created a profile named 'Chuck':
 
 * In Bittorrent Sync, add this folder as a shared folder.
 * In the folder options, grab the **read-only key**. Make sure the key starts with the letter 'B' that signifies it's the read-only one. You can find it by going to the advanced folder preferences. This is the key that you can share with others so they can follow your posts.
+* Posts are written in Markdown.
 
 Configuration
 -------------
