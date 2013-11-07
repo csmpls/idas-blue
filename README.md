@@ -1,13 +1,19 @@
 idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
-Posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html).
+## peer-to-peer messaging
+posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. alternative p2p, mesh network, bring it on.
 
-Posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. Posts are decrypted *in* the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), making it unlikely that posts are ever stored permanently in plaintext.
+## end-to-end encryption
+posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. posts are decrypted in the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
+## trust in a trustless network
 With idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. [Only peers with the right password will be able to read your posts](http://en.wikipedia.org/wiki/RSA_(algorithm)).
 
 idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. 
+
+## researchily  
+this project is primarily concerned with implementing "permissions" in a largely-distributed public-key cryptosystem.
 
 # how it works
 You follow people at "addresses." So it's kind of like twitter. But there are no length limits.
@@ -18,8 +24,6 @@ When you follow someone, you may get posts that are unencrypted, but you will pr
 
 Note that each post can have its own password - if you can decrypt *some* of your friend's posts but not *all* of them, he is probably giving different passwords to different people. 
 
-## researchily  
-this project is primarily concerned with implementing "permissions" in a largely-distributed public-key cryptosystem.
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
 
 Getting started
