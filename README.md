@@ -2,7 +2,7 @@ idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
 ## peer-to-peer messaging
-posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. some open-source thing, mesh network, whatever.
+posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. [mesh network](http://hyperboria.net/), whatever.
 
 ## end-to-end encryption
 posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
@@ -18,7 +18,7 @@ this project aims to implement "permissions" in a largely-distributed public-key
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
 
 ## big problems right now
-- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. **(fixibility: spicy)**
+- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. we need to get off BitTorrent Sync stat. **(fixibility: spicy)**
 - idas doesn't handle non-text very well. BT will sync whatever files, but right now idas doesn't display or link to those files in the browser. we want this to be like a tumblr of bittorrented content. **(fixibility: mild)**
 - it look like shit **(fixibility: spicy (for me))**
 
