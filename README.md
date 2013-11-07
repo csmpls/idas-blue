@@ -1,13 +1,25 @@
-idas blue
+idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
-Idas Blue is a web application for rapid, encrypted messaging with no third parties (servers etc).
+Posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html).
 
-When the user hits "post," text is encrypted and stored locally as JSON. JSON files are synced direct-to-peers using BitTorrent sync, at which point it is encrypted again. Readers decrypt JSON files in the web browser, so, if you use your browser in "privacy mode," plaintext files are unlikely to be stored permanetly on the disk. 
+Posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. Posts are decrypted *in* the web-browser using [javascript](http://crypto.stanford.edu/sjcl/), making it unlikely that posts are ever stored permanently in plaintext.
 
-* idas blue is a fork of [vole.cc](http://vole.cc).
-* Uses the [Stanford JS Crypto library](http://crypto.stanford.edu/sjcl/), which is awesome (but go bears). 
+With idas-blue, you can disseminate your posts to a public network, letting untrusted peers propagate and distribute your files in a p2p fashion. [Only peers with the right password will be able to read your posts](http://en.wikipedia.org/wiki/RSA_(algorithm)).
 
+idas-blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese activists (bittorrent gets around the great firewall). however, vole stores posts as plaintext, so anyone with a follower's address can read all of their posts. 
+
+# how it works
+You follow people at "addresses." So it's kind of like twitter. But there are no length limits.
+
+Posts are written in Markdown.
+
+When you follow someone, you may get posts that are unencrypted, but you will probably get posts that appear blacked out. These posts are encrypted. You can enter a password at the top of your feed to decrypt them. 
+
+Note that each post can have its own password - if you can decrypt *some* of your friend's posts but not *all* of them, he is probably giving different passwords to different people. 
+
+## researchily  
+this project is primarily concerned with implementing "permissions" in a largely-distributed public-key cryptosystem.
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
 
 Getting started
@@ -35,7 +47,6 @@ Find your own user folder, for example, if you created a profile named 'Chuck':
 
 * In Bittorrent Sync, add this folder as a shared folder.
 * In the folder options, grab the **read-only key**. Make sure the key starts with the letter 'B' that signifies it's the read-only one. You can find it by going to the advanced folder preferences. This is the key that you can share with others so they can follow your posts.
-* If you want to list your key on vole.cc, make a pull request on the [website repo](https://github.com/vole/vole.github.io). Here is an [example](https://github.com/vole/vole.github.io/pull/9).
 
 Configuration
 -------------
@@ -49,7 +60,7 @@ Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from a
 Technology
 ----------
 
-* [stanford javascript crypto library](http://crypto.stanford.edu/sjcl/)
+* [stanford javascript crypto library](http://crypto.stanford.edu/sjcl/) (but go bears)
 * [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html)
 * [Vole](http://vole.cc)
 * [Go](http://golang.org/)
