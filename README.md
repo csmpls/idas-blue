@@ -10,7 +10,7 @@ posts are encrypted from the **moment** the sender hits the "send" button to the
 ## trust in a trustless network
 idas-blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (bittorrent gets around the great firewall). however, vole stores posts as plaintext - anyone with a user's address can read all of their posts. so, if you only want three people reading your communications, you're going to have a tiny network with not a lot of resiliance.
 
-with idas-blue, **you can disseminate your posts in an untrustable network**, letting untrusted peers propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your shit.
+with idas-blue, **you can disseminate your posts to an untrustable network widely**, letting (theoretically) any stranger propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your shit.
 
 ## researchily  
 this project aims to implement "permissions" in a largely-distributed public-key cryptosystem.
