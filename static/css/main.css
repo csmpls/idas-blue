@@ -105,7 +105,7 @@ body {
 }
 
 .decrypted {
-  background-color:#CCB1B3;
+  background-color:#0070FF;
 }
 
 .avatar-img {
@@ -126,10 +126,13 @@ body {
   font-weight:bold;
 }
 
-.crypted .user-name {
+.decrypted .user-name {
   font-style: italic;
   font-weight:bold;
-  color:#444;
+	color:#fff;   
+}
+.crypted a { 
+	color:#fff;
 }
 
 .time {
