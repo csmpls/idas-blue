@@ -2,7 +2,7 @@ idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
 ## peer-to-peer messaging
-posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. [mesh network](http://hyperboria.net/), whatever.
+posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. [telehash](http://telehash.org/), [some other mesh network](http://hyperboria.net/), whatever.
 
 ## end-to-end encryption
 posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
