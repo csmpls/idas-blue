@@ -12,9 +12,6 @@ idas-blue is a fork of [Vole](http://vole.cc), which is popular among some **Chi
 
 with idas-blue, **you can disseminate your posts to an untrustable network widely**, letting (theoretically) any stranger propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your shit.
 
-## researchily  
-this project aims to implement "permissions" in a largely-distributed public-key cryptosystem.
-
 ![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
 
 ## big problems right now
