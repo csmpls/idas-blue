@@ -64,7 +64,7 @@ Technology
 License
 -------
 
-all Vole code copyright (C) 2013 Vole development team
+all Vole code copyright (C) 2013 Vole development team  
 all Idas Blue code copyright (c) 2014 http://cosmopol.is
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
