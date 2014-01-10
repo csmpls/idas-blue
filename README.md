@@ -9,7 +9,7 @@ Everything's peer-to-peer, so there's **no need for servers** or any other centr
 Right now posts are simply text, but imagine a distributed Megaupload/Rapidshare in which you can browse (decrypted) content like youtube/flickr/soundcloud/tumblr/twitter/rss reader. In theory you could share any kind of media and Idas Blue would wrap it into a browsable webpage.
 
 ## Privacy and deniability
-Idas Blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (BitTorrent gets around the so-called great firewall of China). However, vole stores posts as plaintext, so anyone with a user's address can read all of their posts. That means that, if you only want three people reading your communications, you're going to have a tiny network with not a lot of redundancy or resiliance.
+Idas Blue is a fork of [Vole](http://vole.cc), which is popular among some Chinese political activists (BitTorrent gets around the so-called great firewall of China). However, Vole stores posts as plaintext, so anyone with a user's address can read all of their posts. This is not ideal for adversarial conditions. If you only want three people reading your communications, you'll have a tiny network with not a lot of redundancy or resiliance.
 
 With Idas Blue, **you can disseminate your posts widely to an untrusted network**, letting (theoretically) any stranger propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your communications.
 
