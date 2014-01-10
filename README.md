@@ -1,4 +1,4 @@
-idas blue is a peer-to-peer messaging system with end-to-end encryption.
+Idas Blue
 ====
 
 ## Introduction
