@@ -1,23 +1,18 @@
 idas blue is a peer-to-peer messaging system with end-to-end encryption.
 ====
 
-## peer-to-peer messaging
-posts are synchronized over [bittorrent sync](http://labs.bittorrent.com/experiments/sync.html), but really any peer-to-peer protocol would work. [telehash](http://telehash.org/), [some other mesh network](http://hyperboria.net/), whatever.
+## Introduction
+Posts are synchronized over [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. Posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
-## end-to-end encryption
-posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
+## Privacy and deniability
+Idas Blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (BitTorrent gets around the so-called great firewall of China). However, vole stores posts as plaintext, so anyone with a user's address can read all of their posts. That means that, if you only want three people reading your communications, you're going to have a tiny network with not a lot of redundancy or resiliance.
 
-## trust in a trustless network
-idas-blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (bittorrent gets around the great firewall). however, vole stores posts as plaintext - anyone with a user's address can read all of their posts. so, if you only want three people reading your communications, you're going to have a tiny network with not a lot of resiliance.
+With Idas Blue, **you can disseminate your posts widely to an untrusted network**, letting (theoretically) any stranger propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your communications.
 
-with idas-blue, **you can disseminate your posts to an untrustable network widely**, letting (theoretically) any stranger propagate and distribute your files in a p2p fashion. only peers with the right password will be able to read your shit.
-
-![FAQ](http://24.media.tumblr.com/18dbcae01145a71c36a34119928118d3/tumblr_mvph2tSZbf1rvbr3mo1_400.gif)
-
-## big problems right now
-- bittorrent sync is closed source and has no API, so following people is a huge pain in the ass. we need to get off BitTorrent Sync stat. **(fixibility: spicy)**
-- idas doesn't handle non-text very well. BT will sync whatever files, but right now idas doesn't display or link to those files in the browser. we want this to be like a tumblr of bittorrented content. **(fixibility: mild)**
-- it look like shit **(fixibility: spicy (for me))**
+## Future plans
+- BitTorrent Sync is closed-source and has no API. This means people have to use its interface for following people - we want all that to be integrated. We could replace this with any peer-to-peer protocol would work. [telehash](http://telehash.org/), [some other mesh network](http://hyperboria.net/), whatever.
+- Idas doesn't handle non-text very well. We could sync any kind of file, so Idas should display or link to those files in the browser. Like a tumblr of bittorrented content.
+- Users need to download a client to view vole. Any way around this? Elegant implementation for android/iOS (really just a matter of generating static HTML and displaying it in a browser).
 
 Getting started
 ---------------
@@ -52,8 +47,6 @@ Configuration
 To override the default configuration options, make a copy of `config.sample.json` and name it `config.json`.
 
 Change the `server.listen` value to `0.0.0.0:6789` to listen for requests from any network device, instead of just the local machine.
-
-
 
 Technology
 ----------
