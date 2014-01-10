@@ -6,7 +6,7 @@ Posts are synchronized over [BitTorrent Sync](http://labs.bittorrent.com/experim
 
 Everything's peer-to-peer, so there's no need for servers or any other centralized infrastructure. Because everything's encrypted, you can safely distribute your data to strangers to give it resilliance/redundancy. Posts are **decrypted in the web-browser** using [Javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
-Right now posts are simply text, but imagine a distributed Megaupload/Rapidshare in which you can browse (decrypted) content like an rss reader/tumblr.
+Right now posts are simply text, but imagine a distributed Megaupload/Rapidshare in which you can browse (decrypted) content like youtube/flickr/soundcloud/tumblr/twitter/rss reader. In theory you could share any kind of media and Idas Blue would wrap it into a browsable webpage.
 
 ## Privacy and deniability
 Idas Blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (BitTorrent gets around the so-called great firewall of China). However, vole stores posts as plaintext, so anyone with a user's address can read all of their posts. That means that, if you only want three people reading your communications, you're going to have a tiny network with not a lot of redundancy or resiliance.
