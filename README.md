@@ -2,7 +2,11 @@ Idas Blue
 ====
 
 ## Introduction
-Posts are synchronized over [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. Posts are **decrypted in the web-browser** using [javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
+Posts are synchronized over [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the **moment** the sender hits the "send" button to the **moment** the reciever enters some password in her browser. 
+
+Everything's peer-to-peer, so there's no need for servers or any other centralized infrastructure. Because everything's encrypted, you can safely distribute your data to strangers to give it resilliance/redundancy. Posts are **decrypted in the web-browser** using [Javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
+
+Right now posts are simply text, but imagine a distributed Megaupload/Rapidshare in which you can browse (decrypted) content like an rss reader/tumblr.
 
 ## Privacy and deniability
 Idas Blue is a fork of [Vole](http://vole.cc), which is popular among some **Chinese activists** (BitTorrent gets around the so-called great firewall of China). However, vole stores posts as plaintext, so anyone with a user's address can read all of their posts. That means that, if you only want three people reading your communications, you're going to have a tiny network with not a lot of redundancy or resiliance.
