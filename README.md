@@ -2,7 +2,7 @@ Idas Blue
 ====
 
 ## Introduction
-Posts are synchronized over [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. 
+Posts are synchronized over [BitTorrent](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. 
 
 Everything's peer-to-peer, so there's **no need for servers** or any other centralized infrastructure. Because everything's encrypted, you can safely distribute your data to strangers to give it resilliance/redundancy. Posts are **decrypted in the web-browser** using [Javascript](http://crypto.stanford.edu/sjcl/), so it's unlikely that posts are ever stored permanently in plaintext.
 
