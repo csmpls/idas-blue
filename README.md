@@ -1,6 +1,8 @@
 Idas Blue
 ====
 
+Idas Blue is an encrypted messaging platform that doesn't need any servers.
+
 ## Introduction
 Posts are synchronized over [BitTorrent](http://labs.bittorrent.com/experiments/sync.html). Posts are encrypted from the moment the sender hits the "send" button to the moment the reciever enters some password in her browser. 
 
